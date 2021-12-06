@@ -1,8 +1,8 @@
 
 
-export const getAllPlayers= async() => {
+export const getAllPlayers= async(n) => {
 
-const res = await fetch("https://free-nba.p.rapidapi.com/players?page=0&per_page=25", {
+const res = await fetch(`https://free-nba.p.rapidapi.com/players?page=0&per_page=${n}`, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "free-nba.p.rapidapi.com",

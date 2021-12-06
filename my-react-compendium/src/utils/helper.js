@@ -16,6 +16,18 @@ return mungedPlayers;
 }
 
 
+export const extractTeams = (apiData) => {
+
+
+    const listOfTeams = apiData.data;
+    
+    const mungedTeams = listOfTeams.map((team) => (team.full_name));
+    
+    return mungedTeams;
+    }
+
+
+
 export const filterPlayersByTeam = (list, team) => {
 console.log(team)
 const filtered = [];
